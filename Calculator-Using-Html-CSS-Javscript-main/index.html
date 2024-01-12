@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator By Saurabh Kumar </title>
+  <style>
+    body {
+      background: linear-gradient(#FF9800 , #FFE382, #FFC47E, #E48F45);
+    }
+    .container{
+      border: 1px rgba(159, 157, 157, 0.741);
+      border-radius: 10px;
+      width: 330px;
+      background: rgb(244, 213, 135);
+      height: 420px;
+      margin-left: 10%;
+    }
+    .input1{
+      width: 230px;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    input {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .button_container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .button{
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      background: rgb(200, 148, 243);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .button_equal{
+      width: 260px;
+      height: 50px;
+      background: rgb(200, 148, 243);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    button:hover{
+      background: rgb(125, 229, 229);
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    h1{
+      color: azure;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculator by Saurabh Kumar</h1>
+  <div class="container">
+    <input type="text" id="int_Value" class ="input1" readonly>
+    <div class="button_container">
+    <button class="button" onclick="ev = ''; document.querySelector('#int_Value').value = ev;
+    ">C</button>
+    <button class="button" onclick="one()">1</button>
+    <button class="button" onclick="two()">2</button>
+    <button class="button" onclick="three()">3</button>
+    <button class="button" onclick="four()">4</button>
+    <button class="button" onclick="five()">5</button>
+    <button class="button" onclick="six()">6</button>
+    <button class="button" onclick="seven()">7</button>
+    <button class="button" onclick="eight()">8</button>
+    <button class="button" onclick="nine()">9</button>
+    <button class="button" onclick="zero()">0</button>
+    <button class="button" onclick="plus()">+</button>
+    <button class="button" onclick="minus()">-</button>
+    <button class="button" onclick="multiply()">&times;</button>
+    <button class="button" onclick="divide()">&divide;</button>
+    <button class="button" onclick="dot()">.</button>
+    <button class="button_equal" onclick="equal()">=</button>
+    </div>
+  </div>
+  <script>
+    let ev = ''
+    function one() {
+      ev = ev + '1'
+      document.querySelector('#int_Value').value = ev
+    }
+    function two() {
+      ev = ev + '2'
+      document.querySelector('#int_Value').value = ev
+    }
+    function three() {
+      ev = ev + '3'
+      document.querySelector('#int_Value').value = ev
+    }
+    function four() {
+      ev = ev + '4'
+      document.querySelector('#int_Value').value = ev
+    }
+    function five() {
+      ev = ev + '5'
+      document.querySelector('#int_Value').value = ev
+    }
+    function six() {
+      ev = ev + '6'
+      document.querySelector('#int_Value').value = ev
+    }
+    function seven() {
+      ev = ev + '7'
+      document.querySelector('#int_Value').value = ev
+    }
+    function eight() {
+      ev = ev + '8'
+      document.querySelector('#int_Value').value = ev
+    }
+    function nine() {
+      ev = ev + '9'
+      document.querySelector('#int_Value').value = ev
+    }
+    function zero() {
+      ev = ev + '0'
+      document.querySelector('#int_Value').value = ev
+    }
+    function dot() {
+      ev = ev + '.'
+      document.querySelector('#int_Value').value = ev
+    }
+    function plus() {
+      ev = ev + '+'
+      document.querySelector('#int_Value').value = ev
+    }
+    function minus() {
+      ev = ev + '-'
+      document.querySelector('#int_Value').value = ev
+    }
+    function multiply() {
+      ev = ev + '*'
+      document.querySelector('#int_Value').value = ev
+    }
+    function divide() {
+      ev = ev + '/'
+      document.querySelector('#int_Value').value = ev
+    }
+    function equal() {
+      let result = document.querySelector('#int_Value').value = eval(ev)
+    }
+
+  </script>
+</body>
+</html>
